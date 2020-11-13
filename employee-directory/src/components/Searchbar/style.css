@@ -1,8 +1,12 @@
-.searchbar {
-    width: 25%;
-    text-align: center;
-    font-size: 2rem;
+.form-group {
+    width: 40%;
+    font-size: 1rem;
     color:black;
     margin-bottom: 5px;
+    text-align: center;
     
+  }
+
+  .btn {
+    background-color: burlywood;
   }

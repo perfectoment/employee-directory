@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import EmployeeCard from "./components/EmployeeCard";
 import Wrapper from "./components/Wrapper";
 import Searchbar from "./components/Searchbar";
+import Header from "./components/Header"
 import Title from "./components/Title";
 import employees from "./employees.json"
 
@@ -19,6 +20,7 @@ render() {
     <Wrapper>
       <Title>Employee Directory</Title>
       <Searchbar/>
+      <Header/>
       {this.state.employees.map(employee => (
         <EmployeeCard
           id={employee.id}
