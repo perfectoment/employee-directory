@@ -12,26 +12,26 @@ import employees from "./employees.json"
 
 class App extends Component {
  state ={
-  employees:employees
-
+  employees:employees,
+  search:"",
  }
 
 
 handleSubmit = event => {
   const arraySearch = this.state.employees;
-  const searchValue = event.target.value;
-  const finalArray = arraySearch.filter(function(name){
-    console.log(name.name)
-    return name.name.includes(searchValue)
-  
-  
+  const searchValue = event.target.value.toUpperCase()
+  const finalArray = arraySearch.filter(function(item){
+    const uppercase = item.name.toUpperCase()
+    return uppercase.includes(searchValue)
   })
-  this.setState({employees:finalArray})
+  this.setState({
+    employees:finalArray
+  });
 }  
 
 
 
- handleClick = event =>{
+ handleClickname = event =>{
   const namesArray = this.state.employees;
   const alpha = namesArray.sort(function(a,b){
     var nameA = a.name.toUpperCase(); 
@@ -45,8 +45,28 @@ handleSubmit = event => {
   }
   return 0;  
 })
-console.log(alpha)
+this.setState({employees:alpha})
  }
+
+ handleClickdepartment = event =>{
+  const namesArray = this.state.employees;
+  const alpha = namesArray.sort(function(a,b){
+    var departmentA = a.department.toUpperCase(); 
+    var departmentB = b.department.toUpperCase(); 
+
+  if (departmentA < departmentB) {
+    return -1; 
+  }
+  if (departmentA > departmentB) {
+    return 1; 
+  }
+  return 0;  
+})
+this.setState({employees:alpha})
+ }
+
+
+
 
 
 render() {
@@ -56,7 +76,10 @@ render() {
       <Searchbar
       handleSubmit={this.handleSubmit}
       />
-      <Header/>
+      <Header
+      handleClickname={this.handleClickname}
+      handleClickdepartment={this.handleClickdepartment}
+      />
       {this.state.employees.map(employee => (
         <EmployeeCard
           id={employee.id}

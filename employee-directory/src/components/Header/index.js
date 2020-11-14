@@ -9,14 +9,14 @@ function Header(props) {
         <div className="col-2">
           Picture
         </div>
-        <div className="col-2 name" onClick={(event) => props.handleClick(event)}>
+        <div className="col-2 name" onClick={(event) => props.handleClickname(event)}>
          <p className="name">Name^</p>
         </div>
         <div className="col-2">
           Position
         </div>
-        <div className="col-2">
-          Department
+        <div className="col-2 name" onClick={(event) => props.handleClickdepartment(event)}>
+          Department^
         </div>
         <div className="col-2">
           Email Address
