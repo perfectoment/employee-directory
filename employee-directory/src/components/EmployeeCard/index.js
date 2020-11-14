@@ -21,8 +21,6 @@ function EmployeeCard(props) {
         <div className="col-2">
           {props.email}
         </div>
-        
-        
       </div>
     </div>
   );

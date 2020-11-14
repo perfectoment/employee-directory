@@ -21,8 +21,8 @@ handleSubmit = event => {
   const arraySearch = this.state.employees;
   const searchValue = event.target.value;
   const finalArray = arraySearch.filter(function(name){
-    console.log(name)
-    return name.includes(searchValue)
+    console.log(name.name)
+    return name.name.includes(searchValue)
   
   
   })

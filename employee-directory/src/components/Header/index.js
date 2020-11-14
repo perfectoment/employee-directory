@@ -9,8 +9,8 @@ function Header(props) {
         <div className="col-2">
           Picture
         </div>
-        <div className="col-2">
-          Name
+        <div className="col-2 name" onClick={(event) => props.handleClick(event)}>
+         <p className="name">Name^</p>
         </div>
         <div className="col-2">
           Position
