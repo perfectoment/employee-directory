@@ -5,11 +5,10 @@ import "./style.css";
 function Searchbar(props){
   return (
       <form className="form-group">
-        <input className="searchbar" placeholder="Please Enter a Name"></input>
-        <button className="btn btn-secondary" type="submit">
+        <input className="searchbar" placeholder="Please Enter a Name" onChange={(event) => props.handleSubmit(event)}></input>
+        {/* <button className="btn btn-secondary" type="submit">
           Submit
-        </button>
-        
+        </button>  */}
       </form>
         
         

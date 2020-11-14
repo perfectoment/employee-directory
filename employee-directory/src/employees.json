@@ -17,7 +17,7 @@
     },
     {
       "id": 3,
-      "name": "Jimminy Bork",
+      "name": "Jiminy Bork",
       "position":"CTO",
       "department":"Engineering",
       "email":"jimminy.bork@gmail.com",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "name": "Clifton Chaulk",
+      "name": "Clifton Clift",
       "position":"VP of Sales",
       "email":"clifton.chaulk@gmail.com",
       "department":"Sales",
@@ -60,7 +60,7 @@
     {
       "id": 8,
       "name": "Fred Brut",
-      "position":"Company Stooge",
+      "position":"Corporate Stooge",
       "email":"fred.brut@gmail.com",
       "department":"Executive",
       "image": "https://randomuser.me/api/portraits/men/26.jpg"
@@ -75,9 +75,9 @@
     },
     {
       "id": 10,
-      "name": "Craig Philburn",
+      "name": "Craig Randawagainsbourogh",
       "position":"Janitor",
-      "email":"craig.philburn@gmail.com",
+      "email":"craig.randawagainsbourogh@gmail.com",
       "department":"Custodial",
       "image": "https://randomuser.me/api/portraits/men/40.jpg"
     }

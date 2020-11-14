@@ -8,6 +8,8 @@ import employees from "./employees.json"
 
 
 
+
+
 class App extends Component {
  state ={
   employees:employees
@@ -15,11 +17,45 @@ class App extends Component {
  }
 
 
+handleSubmit = event => {
+  const arraySearch = this.state.employees;
+  const searchValue = event.target.value;
+  const finalArray = arraySearch.filter(function(name){
+    console.log(name)
+    return name.includes(searchValue)
+  
+  
+  })
+  this.setState({employees:finalArray})
+}  
+
+
+
+ handleClick = event =>{
+  const namesArray = this.state.employees;
+  const alpha = namesArray.sort(function(a,b){
+    var nameA = a.name.toUpperCase(); 
+    var nameB = b.name.toUpperCase(); 
+
+  if (nameA < nameB) {
+    return -1; 
+  }
+  if (nameA > nameB) {
+    return 1; 
+  }
+  return 0;  
+})
+console.log(alpha)
+ }
+
+
 render() {
   return (
     <Wrapper>
       <Title>Employee Directory</Title>
-      <Searchbar/>
+      <Searchbar
+      handleSubmit={this.handleSubmit}
+      />
       <Header/>
       {this.state.employees.map(employee => (
         <EmployeeCard
