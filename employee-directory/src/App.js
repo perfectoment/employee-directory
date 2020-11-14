@@ -16,7 +16,8 @@ class App extends Component {
   
  }
 
-
+//This is the submit button event listener. 
+// It takes in the value of the event and it creates a new array when the input matches the  name.
 handleSubmit = event => {
   const arraySearch = this.state.employees;
   const searchValue = event.target.value.toUpperCase()
@@ -30,7 +31,7 @@ handleSubmit = event => {
 }  
 
 
-
+//This handles the click and it sorts the array of employees alphabetically
  handleClickname = event =>{
   const namesArray = this.state.employees;
   const alpha = namesArray.sort(function(a,b){
@@ -47,7 +48,7 @@ handleSubmit = event => {
 })
 this.setState({employees:alpha})
  }
-
+//this sorts the departments alphabetically
  handleClickdepartment = event =>{
   const namesArray = this.state.employees;
   const alpha = namesArray.sort(function(a,b){

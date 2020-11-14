@@ -14,7 +14,7 @@ Welcome to my Employee directory. Using my application you can easily find the i
 
 ## Deployed Link
 
-* [See Live Site](https://perfectoment.github.io/clicking-game/)
+* [See Live Site](https://perfectoment.github.io/employee-directory/)
 
 
 ## Author
