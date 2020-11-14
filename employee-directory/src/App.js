@@ -13,7 +13,7 @@ import employees from "./employees.json"
 class App extends Component {
  state ={
   employees:employees,
-  search:"",
+  
  }
 
 
